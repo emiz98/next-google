@@ -36,6 +36,7 @@ function SubHeader() {
             className="w-full flex-grow focus:outline-none"
             type="text"
             ref={searchInputRef}
+            defaultValue={router.query.term}
           />
           <XIcon
             onClick={() => (searchInputRef.current.value = '')}
