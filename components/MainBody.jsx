@@ -1,8 +1,21 @@
 import { SearchIcon } from '@heroicons/react/outline'
 import { MicrophoneIcon } from '@heroicons/react/solid'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
+import { useRef } from 'react'
 
 function MainBody() {
+  const router = useRouter()
+  const searchInputRef = useRef(null)
+
+  const search = (e) => {
+    e.preventDefault()
+    const term = searchInputRef.current.value
+    if (!term) return
+
+    router.push(`/search?term=${term}`)
+  }
+
   return (
     <div className="">
       <form action="" className="flex flex-grow flex-col items-center">
@@ -14,13 +27,17 @@ function MainBody() {
           }
         />
         <div
-          className="mt-3 flex w-full max-w-md 
+          className="flex w-full max-w-md 
         items-center rounded-full border border-gray-200 
         px-5 py-3 focus-within:shadow-lg hover:shadow-lg sm:max-w-xl
         lg:max-w-2xl"
         >
           <SearchIcon className="mr-3 h-5 text-gray-500" />
-          <input type="text" className="flex-grow focus:outline-none" />
+          <input
+            ref={searchInputRef}
+            type="text"
+            className="flex-grow focus:outline-none"
+          />
           <MicrophoneIcon className="h-5" />
         </div>
 
@@ -28,7 +45,9 @@ function MainBody() {
           className="mt-8 flex w-1/2 flex-col justify-center
         space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4"
         >
-          <button className="btn">Google Search</button>
+          <button onClick={search} className="btn">
+            Google Search
+          </button>
           <button className="btn">I'm Feeling Lucky</button>
         </div>
         <p className="mt-8 text-sm md:mt-5">
