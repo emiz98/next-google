@@ -1,4 +1,4 @@
-import { NextPage } from 'next'
+import { GetServerSideProps, NextPage } from 'next'
 import Head from 'next/head'
 import Header from '../components/Header'
 import MainBody from '../components/MainBody'
@@ -21,13 +21,3 @@ const Home: NextPage = () => {
 }
 
 export default Home
-
-// export const getServerSideProps: GetServerSideProps = async () => {
-//   const res = await fetch('https://jsonplaceholder.typicode.com/todos')
-//     const data = await res.json();
-
-//   return {
-//     props: {
-//     },
-//   }
-// }

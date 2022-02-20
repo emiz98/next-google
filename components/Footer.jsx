@@ -11,7 +11,7 @@ function Footer() {
       </div>
       <div
         className="grid grid-flow-row-dense grid-cols-1 gap-y-4 
-      p-5 md:grid-cols-2 md:p-8 lg:grid-cols-3"
+      p-5 md:grid-cols-2 md:p-5 md:pl-8 lg:grid-cols-3"
       >
         <div
           className="flex items-center justify-center md:col-span-2

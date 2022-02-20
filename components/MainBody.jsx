@@ -2,11 +2,15 @@ import { SearchIcon } from '@heroicons/react/outline'
 import { MicrophoneIcon } from '@heroicons/react/solid'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
+import suggestions from '../data/suggestions'
 
 function MainBody() {
   const router = useRouter()
   const searchInputRef = useRef(null)
+  const results = suggestions.suggestions.items
+  const [suggestionsPop, setSuggestionsPop] = useState(false)
+  console.log(results)
 
   const search = (e) => {
     e.preventDefault()
@@ -16,8 +20,16 @@ function MainBody() {
     router.push(`/search?term=${term}`)
   }
 
+  const suggestionsTrigger = (e) => {
+    if (e.target.value.length > 0) {
+      setSuggestionsPop(true)
+    } else {
+      setSuggestionsPop(false)
+    }
+  }
+
   return (
-    <div className="">
+    <div className="relative md:mb-32">
       <form action="" className="flex flex-grow flex-col items-center">
         <img
           loading="lazy"
@@ -35,11 +47,23 @@ function MainBody() {
           <SearchIcon className="mr-3 h-5 text-gray-500" />
           <input
             ref={searchInputRef}
+            onChange={(e) => suggestionsTrigger(e)}
             type="text"
             className="flex-grow focus:outline-none"
           />
-          <MicrophoneIcon className="h-5" />
+          {/* <MicrophoneIcon className="h-5" /> */}
+          <img className="h-8" src="/google-voice-search.ico" alt="" />
         </div>
+        {/* <div
+          className={`hidden ${
+            suggestionsPop ? 'md:inline-flex' : 'hidden'
+          } absolute top-[14rem] w-full flex-col items-center space-y-2
+          bg-white`}
+        >
+          {results.map((result) => (
+            <div key={result.id}>{result.title}</div>
+          ))}
+        </div> */}
 
         <div
           className="mt-8 flex w-1/2 flex-col justify-center

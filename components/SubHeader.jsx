@@ -20,7 +20,7 @@ function SubHeader() {
         <img
           onClick={() => router.push('/')}
           src="/google-h.ico"
-          className="hidden h-14 cursor-pointer object-contain sm:inline-flex"
+          className="hidden h-10 cursor-pointer object-contain sm:inline-flex"
         />
         <img
           onClick={() => router.push('/')}
