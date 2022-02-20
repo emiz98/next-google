@@ -11,8 +11,8 @@ function Header() {
 
       {/* right */}
       <div className="flex items-center space-x-4">
-        <p className="link">Gmail</p>
-        <p className="link">Images</p>
+        <p className="link hidden md:inline-flex">Gmail</p>
+        <p className="link hidden md:inline-flex">Images</p>
         <ViewGridIcon
           className="h-10 w-10 cursor-pointer rounded-full
          p-2 hover:bg-gray-100"
