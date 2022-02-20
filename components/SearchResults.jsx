@@ -1,3 +1,5 @@
+import Pagination from './Pagination'
+
 function SearchResults({ results }) {
   return (
     <div className="mx-auto w-full px-3 sm:pl-[5%] md:pl-[10%] lg:pl-56">
@@ -9,7 +11,10 @@ function SearchResults({ results }) {
       {results.items?.map((result) => (
         <div key={result.link} className="mb-8 max-w-3xl">
           <div className="group">
-            <a href={result.link} className="text-sm">
+            <a
+              href={result.link}
+              className="flex justify-start truncate text-sm"
+            >
               {result.formattedUrl}
             </a>
             <a href={result.link}>
@@ -24,6 +29,7 @@ function SearchResults({ results }) {
           <p className="line-clamp-2">{result.snippet}</p>
         </div>
       ))}
+      <Pagination />
     </div>
   )
 }
