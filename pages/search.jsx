@@ -21,8 +21,9 @@ function Search({ results }) {
 export default Search
 
 export async function getServerSideProps(context) {
-  const data = await fetch('http://localhost:3000/api/searchresults').then(
-    (res) => res.json()
+  const base_url = process.env.NEXTAUTH_URL
+  const data = await fetch(`${base_url}/api/searchresults`).then((res) =>
+    res.json()
   )
 
   return {
