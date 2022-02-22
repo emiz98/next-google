@@ -4,13 +4,14 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useRef, useState } from 'react'
 import suggestions from '../data/suggestions'
+import Modal from '../components/Modal'
 
 function MainBody() {
   const router = useRouter()
   const searchInputRef = useRef(null)
   const results = suggestions.suggestions.items
   const [suggestionsPop, setSuggestionsPop] = useState(false)
-  console.log(results)
+  // console.log(results)
 
   const search = (e) => {
     e.preventDefault()
@@ -30,6 +31,7 @@ function MainBody() {
 
   return (
     <div className="relative md:mb-32">
+      <Modal />
       <form action="" className="flex flex-grow flex-col items-center">
         <img
           loading="lazy"
