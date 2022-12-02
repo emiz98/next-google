@@ -1,27 +1,34 @@
-# Next.js + Tailwind CSS Example
+# Google 2.0
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+![cover](cover.png)
 
-## Preview
+## Table of Contents
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+- [Introduction](#introduction)
+- [Build Process](#build-process)
+- [Tech Stack](#tech-stack)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+<br/>
 
-## Deploy your own
+## Introduction
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+![main image](https://cdn.sanity.io/images/1z5g6za5/production/67fb4b5a63614dcf32d054f3ac28888929e24cfd-1440x838.png?w=2000&fit=max&auto=format)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+Google LLC is an American multinational technology company that mainly focusing on search engine technology.
 
-## How to use
+Google 2.0 is only made for an educational purposes only. This is initially powered by the original google API, but due to the limitations of the requests, the API was mocked and only contains the search results for "Stephan Hawking"
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+## Build Process
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
+- Clone or download the repo
+- `npm install` or `yarn` to install dependencies
+- `npm start` or `yarn run dev` to run the application
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+
+## Tech Stack
+
+<p float="left">
+    <img src="https://cdn.sanity.io/images/1z5g6za5/production/c51f7cd856302f625d5622d91847e184435c00ba-300x300.png?w=2000&fit=max&auto=format" width="60"  style="padding-right:20px"/>
+    <img src="https://cdn.sanity.io/images/1z5g6za5/production/ea0d729f383fe9f113c7d2da95af5a39eecfa226-64x64.png?w=2000&fit=max&auto=format" width="60"  style="padding-right:20px"/>
+    <img src="https://cdn.sanity.io/images/1z5g6za5/production/97986d3dd7e897b83e06a41aaf9ee7a8de146685-768x768.png?w=2000&fit=max&auto=format" width="60"  style="padding-right:20px"/>
+</p>
